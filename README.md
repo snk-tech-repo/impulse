@@ -1,7 +1,7 @@
 This is official Impulse neural network library repository.
 
 You can do this with it and more.
-
+```java
 ArrayList<Layer> layers = new ArrayList<Layer>();
 
 layers.add(new Input(3, 150, 150));
@@ -30,3 +30,4 @@ model.fitWithValid(new Adam(0.001f, 0.9f, 0.999f), new CrossEntropy(),
 
 float[][] res = model.predict(testGen);
 new Matrix(res).print();
+```
