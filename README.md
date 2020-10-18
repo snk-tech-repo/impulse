@@ -28,6 +28,9 @@ ImageGenerator testGen = new ImageGenerator("/home/user/Desktop/cats_n_dogs/vali
 model.fitWithValid(new Adam(0.001f, 0.9f, 0.999f), new CrossEntropy(),
 		trainGen, testGen, 100, true);		
 
-float[][] res = model.predict(testGen);
-new Matrix(res).print();
+while(testGen.next())
+{
+	float[][] res = model.predict(testGen.x);
+	new Matrix(res).print();
+}
 ```
